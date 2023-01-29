@@ -59,15 +59,29 @@ body{
 .button{
     font-weight: bold;
     font-size: 20px;
+    transition-duration: 0.4s;
 }
 
 .button.clear{
-    background-color: lightcoral;
+    background-color: lightsalmon;
     margin-right: 10px;
+}
+.button.clear:hover{
+    background-color: lightcoral;
+}
+.button.clear:active{
+    transform: translateY(4px);
 }
 .button.delete{
     background-color: lightblue;
     margin-left: 10px;
+}
+
+.button.delete:hover{
+    background-color: lightskyblue;
+}
+.button.delete:active{
+    transform: translateY(4px);
 }
 
 .button-section.bottom{
@@ -85,4 +99,11 @@ body{
     border-radius: 10px;
     width: 100%;
     height: 100%;
+}
+.button:not(.clear):not(.delete):hover{
+    background-color: gray;
+}
+
+.button:not(.clear):not(.delete):active{
+    transform: translateY(4px);
 }
