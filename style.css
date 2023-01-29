@@ -21,6 +21,7 @@ body{
 }
 
 .screen{
+    display: flex;
     border: 2px solid black;
     border-radius: 10px;
     background-color: lightgray;
@@ -28,6 +29,17 @@ body{
     height: 100px;
     margin: 20px;
     text-align: center;
+    justify-content: right;
+}
+
+.display{
+    width: 250px;
+    height: auto;
+    margin-top: 40px;
+    margin-right: 20px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 45px;
 }
 
 .button-section.top{
@@ -37,18 +49,23 @@ body{
     height: 50px;
 
 }
-.clear, .delete{
+.button.clear, .button.delete{
     border-radius: 10px;
     border: 2px solid black;
     width: 167px;
     height: 50px;
 }
 
-.clear{
+.button{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.button.clear{
     background-color: lightcoral;
     margin-right: 10px;
 }
-.delete{
+.button.delete{
     background-color: lightblue;
     margin-left: 10px;
 }
@@ -62,8 +79,10 @@ body{
     padding: 20px;
 }
 
-.button{
+.button:not(.clear):not(.delete){
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
